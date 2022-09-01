@@ -6,7 +6,7 @@ export const Header: FC = () => {
     const handleActive = () => setActive(prevState => !prevState);
 
     return (
-        <header className={`flex items-center justify-between flex-wrap bg-primary ${isActive ? 'h-[220px]' : 'h-54'} lg:h-[72px] px-24`}>
+        <header className={`flex items-center justify-between flex-wrap bg-primary ${isActive ? 'h-[220px]' : 'h-54'} lg:h-[72px] w-full px-24 fixed z-10`}>
             <div className="flex items-center flex-shrink-0 text-secondary mr-6">
                 <span className="font-display text-xl">New Era</span>
             </div>

@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { Layout } from "../components/Layout";
+import { Welcome } from "../sections";
 
 const Home: NextPage = () => {
     return (
@@ -14,9 +15,7 @@ const Home: NextPage = () => {
             </Head>
 
             <main className="font-body">
-                <h1 className="text-primary">
-                    Welcome to <a href="https://nextjs.org">Next.js!</a>
-                </h1>
+                <Welcome />
             </main>
         </Layout>
     );

@@ -38,4 +38,14 @@
         font-weight: 400;
         font-style: normal;
     }
+
+    body {
+        font-family: Gilroy;
+    }
+
+    @media (min-width: 1080px) {
+        section {
+            min-height: 100vh;
+        }
+    }
 }
