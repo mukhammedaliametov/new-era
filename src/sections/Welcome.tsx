@@ -1,6 +1,8 @@
 import { FC, useState } from "react";
+import { useModal } from "../hooks/handleModal";
 
 export const Welcome: FC = () => {
+    const { handleModal } = useModal()
     const [sliderActive, setSliderActive] = useState(1);
 
     const handleSlider = (buttonType: "prev" | "next") => {
@@ -36,7 +38,7 @@ export const Welcome: FC = () => {
                         viewBox="0 0 24 24"
                         strokeWidth={1.5}
                         stroke="currentColor"
-                        className="w-10 h-10 mr-6 cursor-pointer"
+                        className="w-72 h-72 mr-6 cursor-pointer"
                         onClick={() => handleSlider("prev")}
                     >
                         <path
@@ -52,7 +54,7 @@ export const Welcome: FC = () => {
                         viewBox="0 0 24 24"
                         strokeWidth={1.5}
                         stroke="currentColor"
-                        className="w-10 h-10 ml-6 cursor-pointer"
+                        className="w-72 h-72 ml-6 cursor-pointer"
                         onClick={() => handleSlider("next")}
                     >
                         <path
@@ -101,12 +103,12 @@ export const Welcome: FC = () => {
                         </p>
                     </span>
                 </div>
-                <a
-                    href="#"
+                <span
+                    onClick={() => handleModal(true)}
                     className="flex justify-center items-center bg-primary font-bold text-black h-64 w-[400px]"
                 >
                     Получить консультацию
-                </a>
+                </span>
             </div>
         </section>
     );

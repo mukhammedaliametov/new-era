@@ -28,7 +28,7 @@ export const Header: FC = () => {
             <div className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto font-body ${isActive ? '' : 'translate-y-[-120%]'} lg:translate-y-0`}>
                 <div className="text-sm lg:flex-grow">
                     <a
-                        href="#responsive-header"
+                        href="#about"
                         className="block mt-4 lg:inline-block lg:mt-0 mr-18"
                     >
                         О компании
