@@ -6,7 +6,11 @@ export const Header: FC = () => {
     const handleActive = () => setActive(prevState => !prevState);
 
     return (
-        <header className={`flex items-center justify-between flex-wrap bg-primary ${isActive ? 'h-[220px]' : 'h-54'} lg:h-[72px] w-full px-24 fixed z-10`}>
+        <header
+            className={`flex items-center justify-between flex-wrap bg-primary ${
+                isActive ? "h-[220px]" : "h-54"
+            } lg:h-[72px] w-full px-24 fixed z-10`}
+        >
             <div className="flex items-center flex-shrink-0 text-secondary mr-6">
                 <span className="font-display text-xl">New Era</span>
             </div>
@@ -25,7 +29,11 @@ export const Header: FC = () => {
                     </svg>
                 </button>
             </div>
-            <div className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto font-body ${isActive ? '' : 'translate-y-[-120%]'} lg:translate-y-0`}>
+            <div
+                className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto font-body ${
+                    isActive ? "" : "translate-y-[-120%]"
+                } lg:translate-y-0`}
+            >
                 <div className="text-sm lg:flex-grow">
                     <a
                         href="#about"
@@ -34,22 +42,16 @@ export const Header: FC = () => {
                         О компании
                     </a>
                     <a
-                        href="#responsive-header"
+                        href="#software"
                         className="block mt-4 lg:inline-block lg:mt-0 mr-18"
                     >
-                        Возможности
+                        Программное обеспечение
                     </a>
                     <a
                         href="#responsive-header"
                         className="block mt-4 lg:inline-block lg:mt-0 mr-18"
                     >
                         Оборудование
-                    </a>
-                    <a
-                        href="#responsive-header"
-                        className="block mt-4 lg:inline-block lg:mt-0 mr-18"
-                    >
-                        Клиенты
                     </a>
                     <a
                         href="#responsive-header"

@@ -1,5 +1,5 @@
 import { Welcome } from "./Welcome";
 import { About } from "./About";
-import { Possibilities } from "./Possibilities";
+import { Software } from "./Software";
 
-export { Welcome, About, Possibilities };
+export { Welcome, About, Software };

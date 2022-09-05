@@ -2,7 +2,7 @@ import { FC, useState } from "react";
 import { useModal } from "../hooks/handleModal";
 
 export const Welcome: FC = () => {
-    const { handleModal } = useModal()
+    const { handleModal } = useModal();
     const [sliderActive, setSliderActive] = useState(1);
 
     const handleSlider = (buttonType: "prev" | "next") => {
@@ -27,9 +27,10 @@ export const Welcome: FC = () => {
         <section className={`flex w-full bg-welcome relative`}>
             <div className="block h-full w-full bg-black/30 absolute" />
             <div className="bg-black flex text-primary flex-col h-3/5 w-3/5 bottom-0 right-0 p-32 absolute">
-                <h1 className="font-display text-display w-4/5 mb-32 uppercase">
-                    New Era - GPS мониторинг транспорта и контроль расхода
-                    топлива
+                <h1 className="font-display text-3xl w-4/5 mb-32 uppercase">
+                    NEW ERA - СИСТЕМЫ GPS МОНИТОРИНГА ТРАНСПОРТА ЭТО ГОТОВЫЕ
+                    РЕШЕНИЯ, ПРЕДНАЗНАЧЕННЫЕ ДЛЯ ОПТИМИЗАЦИИ ЗАТРАТ И ПОВЫШЕНИЯ
+                    ЭФФЕКТИВНОСТИ ИСПОЛЬЗОВАНИЯ ВАШЕГО АВТОПАРКА
                 </h1>
                 <div className="flex items-center text-xl mb-24">
                     <svg
