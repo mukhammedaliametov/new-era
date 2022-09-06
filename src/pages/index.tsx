@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { Layout } from "../components/Layout";
 import ModalContextProvider from "../HOC/ModalContext";
-import { About, Software, Welcome } from "../sections";
+import { About, Contacts, Equipment, Software, Welcome } from "../sections";
 
 const Home: NextPage = () => {
     return (
@@ -24,6 +24,8 @@ const Home: NextPage = () => {
                     <Welcome />
                     <About />
                     <Software />
+                    <Equipment />
+                    <Contacts />
                 </main>
             </Layout>
         </ModalContextProvider>
