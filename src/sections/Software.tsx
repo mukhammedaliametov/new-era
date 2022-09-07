@@ -3,8 +3,11 @@ import { FC } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper";
+import { useModal } from "../hooks/handleModal";
 
 export const Software: FC = () => {
+    const { handleModal } = useModal();
+
     return (
         <section id="software" className="flex justify-center items-center">
             <div className="container flex flex-col items-center">
@@ -73,6 +76,12 @@ export const Software: FC = () => {
                                 </p>
                             </SwiperSlide>
                         </Swiper>
+                        <span
+                            onClick={() => handleModal(true)}
+                            className="flex justify-center items-center bg-primary font-bold text-black h-64 w-[400px] cursor-pointer"
+                        >
+                            Узнать подробнее
+                        </span>
                     </div>
                 </div>
             </div>

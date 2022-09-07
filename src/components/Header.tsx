@@ -48,13 +48,19 @@ export const Header: FC = () => {
                         Программное обеспечение
                     </a>
                     <a
-                        href="#responsive-header"
+                        href="#possibilities"
+                        className="block mt-4 lg:inline-block lg:mt-0 mr-18"
+                    >
+                        Возможности
+                    </a>
+                    <a
+                        href="#software"
                         className="block mt-4 lg:inline-block lg:mt-0 mr-18"
                     >
                         Оборудование
                     </a>
                     <a
-                        href="#responsive-header"
+                        href="#contacts"
                         className="block mt-4 lg:inline-block lg:mt-0"
                     >
                         Контакты

@@ -9,7 +9,10 @@ export const Contacts: FC = () => {
     }, []);
 
     return (
-        <section className="flex justify-center items-center bg-black">
+        <section
+            id="contacts"
+            className="flex justify-center items-center bg-black"
+        >
             <div className="container flex flex-col items-center">
                 <h1 className="font-display text-display mb-54 text-primary">
                     Контакты
@@ -108,7 +111,10 @@ export const Contacts: FC = () => {
                                 </span>
                                 Номер телефона:
                             </span>
-                            <a href="tel:+998991949494" className="font-bold text-tiny">
+                            <a
+                                href="tel:+998991949494"
+                                className="font-bold text-tiny"
+                            >
                                 +99899 194 94 94
                             </a>
                         </div>
