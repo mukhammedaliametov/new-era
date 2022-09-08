@@ -7,10 +7,11 @@ export const Header: FC = () => {
 
     return (
         <header
-            className={`flex items-center justify-between flex-wrap bg-primary ${
+            className={`flex justify-center items-center bg-primary ${
                 isActive ? "h-[220px]" : "h-54"
             } lg:h-[72px] w-full px-24 fixed z-10`}
         >
+            <div className="container flex items-center justify-between flex-wrap">
             <div className="flex items-center flex-shrink-0 text-secondary mr-6">
                 <span className="font-display text-xl">New Era</span>
             </div>
@@ -74,6 +75,7 @@ export const Header: FC = () => {
                         +99899 194-94-94
                     </a>
                 </div>
+            </div>
             </div>
         </header>
     );
