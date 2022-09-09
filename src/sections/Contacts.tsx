@@ -1,8 +1,11 @@
 import { FC, useEffect, useState } from "react";
 import { Map, Placemark } from "@pbe/react-yandex-maps";
+import { useDeviceDetector } from "../hooks/useDeciveDecetor";
 
 export const Contacts: FC = () => {
     const [isLoaded, setLoaded] = useState(false);
+    const {isMobile } =useDeviceDetector()
+
 
     useEffect(() => {
         setLoaded(true);
@@ -17,15 +20,16 @@ export const Contacts: FC = () => {
                 <h1 className="font-display text-display mb-54 text-primary">
                     Контакты
                 </h1>
-                <div className="flex flex-col xl:flex-row justify-center relative">
+                <div className="flex flex-col xl:flex-row justify-center items-center relative">
                     {isLoaded && (
                         <Map
+                        className="mb-24 xl:mb-0"
                             defaultState={{
                                 center: [42.47422942766454, 59.61304045092482],
                                 zoom: 17,
                             }}
-                            height={540}
-                            width={920}
+                            height={isMobile ? 240 : 540}
+                            width={isMobile ? 375 : 920}
                         >
                             <Placemark
                                 geometry={[
@@ -34,9 +38,9 @@ export const Contacts: FC = () => {
                             />
                         </Map>
                     )}
-                    <div className="flex flex-col min-w-[400px] max-w-[400px] bg-primary py-24 px-16">
-                        <div className="flex flex-col mb-24">
-                            <span className="flex items-center text-xl mb-4">
+                    <div className="flex flex-col items-center xl:items-start text-center min-w-[400px] max-w-[400px] bg-primary py-24 px-16">
+                        <div className="flex flex-col mb-24 text-center xl:text-left">
+                            <span className="flex justify-center xl:justify-start items-center text-xl mb-4">
                                 <span className="mr-4">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -65,8 +69,8 @@ export const Contacts: FC = () => {
                                 Дослык, 159
                             </span>
                         </div>
-                        <div className="flex flex-col mb-24">
-                            <span className="flex items-center text-xl mb-4">
+                        <div className="flex flex-col mb-24 text-center xl:text-left">
+                            <span className="flex justify-center xl:justify-start items-center text-xl mb-4">
                                 <span className="mr-4">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -91,8 +95,8 @@ export const Contacts: FC = () => {
                                 new-era@gmail.com
                             </a>
                         </div>
-                        <div className="flex flex-col">
-                            <span className="flex items-center text-xl mb-4">
+                        <div className="flex flex-col text-center xl:text-left">
+                            <span className="flex justify-center xl:justify-start items-center text-xl mb-4">
                                 <span className="mr-4">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"

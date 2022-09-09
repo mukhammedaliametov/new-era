@@ -50,7 +50,7 @@ export const Equipment: FC = () => {
                 </Typography>
                 <div className="flex">
                     <Swiper
-                        className="max-w-[360px] xl:max-w-[1000px]"
+                        className="max-w-[360px] md:max-w-[640px] xl:max-w-[1000px]"
                         spaceBetween={50}
                         loop
                         slidesPerView={1}

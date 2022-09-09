@@ -5,9 +5,16 @@ interface ButtonProps {
     onClick?: () => void;
     children: ReactNode;
     type?: "reset" | "button" | "submit";
+    className?: string;
 }
 
-export const Button: FC<ButtonProps> = ({ color, onClick, children, type }) => {
+export const Button: FC<ButtonProps> = ({
+    color,
+    onClick,
+    children,
+    type,
+    className,
+}) => {
     return (
         <button
             onClick={onClick}
@@ -15,7 +22,7 @@ export const Button: FC<ButtonProps> = ({ color, onClick, children, type }) => {
                 color === "primary"
                     ? "bg-primary text-black"
                     : "bg-black text-primary"
-            }`}
+            } ${className}`}
             type={type || "button"}
         >
             {children}

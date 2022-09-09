@@ -16,7 +16,7 @@ export const Software: FC = () => {
                     Программное обеспечение
                 </Typography>
                 <div className="flex flex-col xl:flex-row items-center">
-                    <div className="flex w-full xl:w-1/2 relative mb-32 xl:mb-0">
+                    <div className="flex justify-center w-full xl:w-1/2 relative mb-32 xl:mb-0">
                         <Image
                             src="/assets/images/local-ru.webp"
                             className="rounded-xl"

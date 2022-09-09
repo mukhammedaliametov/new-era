@@ -90,7 +90,7 @@ export const Possibilities: FC = () => {
             <div className="container flex flex-col items-center py-32 px-16">
                 <Typography type="h1" color="black">Возможности</Typography>
                 <div className="flex flex-col-reverse xl:flex-row items-start w-full">
-                    <div className="grid grid-cols-2 xl:grid-cols-4 gap-8 xl:gap-44 w-full xl:w-1/2">
+                    <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 xl:gap-44 w-full xl:w-1/2">
                         {possibilities.map(
                             ({ image, title }, index: number) => (
                                 <div
@@ -103,21 +103,21 @@ export const Possibilities: FC = () => {
                                     onClick={() => setSelectedPoss(index)}
                                 >
                                     <Image
-                                        className="text-primary mb-32"
+                                        className="text-primary"
                                         src={`/assets/icons/${image}.svg`}
                                         height={54}
                                         width={54}
                                         alt=""
                                         style={{ color: "red" }}
                                     />
-                                    <span className="font-bold text-xs text-center">
+                                    <span className="font-bold mt-12 text-xs text-center">
                                         {title}
                                     </span>
                                 </div>
                             )
                         )}
                     </div>
-                    <div className="flex flex-col w-full xl:w-1/2 px-36 mb-24 :xlmb-0 text-center xl:text-left">
+                    <div className="flex flex-col items-center xl:items-start w-full xl:w-1/2 px-36 mb-24 :xlmb-0 text-center xl:text-left">
                         <span className="font-display text-lg xl:text-2xl mb-12 xl:mb-24">
                             {possibilities[selectedPoss].title}
                         </span>
@@ -125,7 +125,7 @@ export const Possibilities: FC = () => {
                             (option: string, index: number) => (
                                 <div
                                     key={`option__${index}`}
-                                    className="flex font-bold text-xs xl:text-tiny mb-12 last:mb-0"
+                                    className="flex font-bold text-xs md:text-tiny mb-12 last:mb-0"
                                 >
                                     - {option}
                                 </div>
