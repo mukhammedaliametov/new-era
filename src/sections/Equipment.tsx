@@ -6,7 +6,7 @@ import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Button } from "../components/ui";
+import { Button, Typography } from "../components/ui";
 
 const slides = [
     {
@@ -44,13 +44,13 @@ const slides = [
 export const Equipment: FC = () => {
     return (
         <section className="flex justify-center items-center">
-            <div className="container flex flex-col items-center">
-                <h1 className="font-display text-display mb-54">
+            <div className="container flex flex-col items-center py-32 px-16">
+                <Typography type="h1" color="black">
                     Оборудование
-                </h1>
+                </Typography>
                 <div className="flex">
                     <Swiper
-                        className="max-w-[1000px]"
+                        className="max-w-[360px] xl:max-w-[1000px]"
                         spaceBetween={50}
                         loop
                         slidesPerView={1}
@@ -61,8 +61,8 @@ export const Equipment: FC = () => {
                     >
                         {slides.map(({ image, title, description }) => (
                             <SwiperSlide key={image}>
-                                <div className="flex items-center h-full w-full px-32 pr-44">
-                                    <div className="flex justify-center shrink-0 items-center mr-32">
+                                <div className="flex flex-col xl:flex-row items-center h-full w-full px-32 pr-44">
+                                    <div className="flex justify-center shrink-0 items-center xl:mr-32">
                                         <Image
                                             src={`/assets/images/slides/${image}`}
                                             height={380}
@@ -70,7 +70,7 @@ export const Equipment: FC = () => {
                                             alt=""
                                         />
                                     </div>
-                                    <div className="flex flex-col items-start">
+                                    <div className="flex flex-col items-center xl:items-start text-center xl:text-left">
                                         <span className="font-display text-xl max-w-[440px] mb-8">
                                             {title}
                                         </span>

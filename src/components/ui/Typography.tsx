@@ -10,7 +10,7 @@ export const Typography: FC<TypographyProps> = ({ type, children, color }) => {
     switch (type) {
         case "h1":
             return (
-                <h1 className={`font-display text-4xl xl:text-display mb-54 text-${color}`}>
+                <h1 className={`font-display text-4xl xl:text-display text-center xl:text-left mb-54 text-${color}`}>
                     {children}
                 </h1>
             );
