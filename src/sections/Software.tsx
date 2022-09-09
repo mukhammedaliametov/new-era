@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper";
 import { useModal } from "../hooks/handleModal";
+import { Button } from "../components/ui";
 
 export const Software: FC = () => {
     const { handleModal } = useModal();
@@ -76,12 +77,12 @@ export const Software: FC = () => {
                                 </p>
                             </SwiperSlide>
                         </Swiper>
-                        <span
+                        <Button
                             onClick={() => handleModal(true)}
-                            className="flex justify-center items-center bg-primary font-bold text-black h-64 w-[400px] cursor-pointer"
+                            color="primary"
                         >
                             Узнать подробнее
-                        </span>
+                        </Button>
                     </div>
                 </div>
             </div>

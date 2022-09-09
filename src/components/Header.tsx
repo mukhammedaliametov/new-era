@@ -12,7 +12,7 @@ export const Header: FC = () => {
             } lg:h-[72px] w-full px-24 fixed z-10`}
         >
             <div className="container flex items-center justify-between flex-wrap">
-            <div className="flex items-center flex-shrink-0 text-secondary mr-6">
+            <div className="flex items-center flex-shrink-0 text-secondary mr-32">
                 <span className="font-display text-xl">New Era</span>
             </div>
             <div className="block lg:hidden font-body">

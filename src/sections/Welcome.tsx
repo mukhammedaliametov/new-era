@@ -1,4 +1,5 @@
 import { FC, useState } from "react";
+import { Button } from "../components/ui";
 import { useModal } from "../hooks/handleModal";
 
 export const Welcome: FC = () => {
@@ -33,12 +34,12 @@ export const Welcome: FC = () => {
                         РЕШЕНИЯ, ПРЕДНАЗНАЧЕННЫЕ ДЛЯ ОПТИМИЗАЦИИ ЗАТРАТ И
                         ПОВЫШЕНИЯ ЭФФЕКТИВНОСТИ ИСПОЛЬЗОВАНИЯ ВАШЕГО АВТОПАРКА
                     </h1>
-                    <span
+                    <Button
                         onClick={() => handleModal(true)}
-                        className="flex justify-center items-center bg-primary font-bold text-black h-64 w-[400px] cursor-pointer"
+                        color="primary"
                     >
                         Получить консультацию
-                    </span>
+                    </Button>
                 </div>
             </div>
         </section>

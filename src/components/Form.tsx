@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { useFormik } from "formik";
 import { useModal } from "../hooks/handleModal";
+import { Button } from "./ui";
 
 export const Form: FC = () => {
     const { isActive, handleModal } = useModal();
@@ -56,12 +57,12 @@ export const Form: FC = () => {
                     onChange={formik.handleChange}
                     value={formik.values.phone}
                 />
-                <button
-                    className="bg-black p-24 text-primary font-bold min-w-[320px] rounded"
+                <Button
+                    color="black"
                     type="submit"
                 >
                     Отправить
-                </button>
+                </Button>
             </form>
         </div>
     );

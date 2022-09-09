@@ -6,6 +6,7 @@ import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Button } from "../components/ui";
 
 const slides = [
     {
@@ -76,13 +77,11 @@ export const Equipment: FC = () => {
                                         <span className="text-tiny mb-36">
                                             {description}
                                         </span>
-                                        <a
-                                            href="#"
-                                            className="bg-primary font-bold text-sm p-10 px-44 rounded uppercase"
-                                            download
+                                        <Button
+                                            color="primary"
                                         >
                                             Скачать флаер
-                                        </a>
+                                        </Button>
                                     </div>
                                 </div>
                             </SwiperSlide>
