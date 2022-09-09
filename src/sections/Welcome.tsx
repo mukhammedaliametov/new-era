@@ -28,8 +28,8 @@ export const Welcome: FC = () => {
         <section className={`flex w-full bg-welcome relative`}>
             <div className="block h-full w-full bg-black/50 absolute" />
             <div className="flex justify-center items-center bg-black/70 h-full w-full top-0 left-0 absolute">
-                <div className="container flex flex-col justify-center text-primary p-24">
-                    <h1 className="font-display text-3xl w-[720px] mt-72  mb-32 leading-9 uppercase">
+                <div className="container flex flex-col justify-center items-center text-primary p-24">
+                    <h1 className="font-display text-sm xl:text-3xl w-full xl:w-[720px] mt-72  mb-32 leading-5 xl:leading-9 uppercase text-center">
                         NEW ERA - СИСТЕМЫ GPS МОНИТОРИНГА ТРАНСПОРТА ЭТО ГОТОВЫЕ
                         РЕШЕНИЯ, ПРЕДНАЗНАЧЕННЫЕ ДЛЯ ОПТИМИЗАЦИИ ЗАТРАТ И
                         ПОВЫШЕНИЯ ЭФФЕКТИВНОСТИ ИСПОЛЬЗОВАНИЯ ВАШЕГО АВТОПАРКА

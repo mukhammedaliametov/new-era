@@ -17,7 +17,7 @@ export const Contacts: FC = () => {
                 <h1 className="font-display text-display mb-54 text-primary">
                     Контакты
                 </h1>
-                <div className="flex justify-center relative">
+                <div className="flex flex-col xl:flex-row justify-center relative">
                     {isLoaded && (
                         <Map
                             defaultState={{

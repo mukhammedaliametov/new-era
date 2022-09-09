@@ -43,14 +43,18 @@
         font-family: Gilroy;
     }
 
-    @media (min-width: 1080px) {
-        section {
-            min-height: 100vh;
-        }
+    html, body, #__next, main {
+        min-width: 100%;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    section {
+        min-height: 100vh;
+        width: 100%;
     }
 
     :root {
         --swiper-theme-color: #000000 !important;
     }
-
 }

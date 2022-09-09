@@ -4,19 +4,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Autoplay } from "swiper";
 import { useModal } from "../hooks/handleModal";
-import { Button } from "../components/ui";
+import { Button, Typography } from "../components/ui";
 
 export const Software: FC = () => {
     const { handleModal } = useModal();
 
     return (
         <section id="software" className="flex justify-center items-center">
-            <div className="container flex flex-col items-center">
-                <h1 className="font-display text-display mb-54">
+            <div className="container flex flex-col justify-center items-center py-32 px-16">
+                <Typography type="h1" color="black">
                     Программное обеспечение
-                </h1>
-                <div className="flex items-center">
-                    <div className="flex w-1/2 relative">
+                </Typography>
+                <div className="flex flex-col xl:flex-row items-center">
+                    <div className="flex w-full xl:w-1/2 relative mb-32 xl:mb-0">
                         <Image
                             src="/assets/images/local-ru.webp"
                             className="rounded-xl"
@@ -24,14 +24,14 @@ export const Software: FC = () => {
                             width={500}
                             alt=""
                         />
-                        <div className="block bg-primary top-50 left-50 h-[280px] w-[500px] rounded-xl absolute -z-10"></div>
+                        <div className="hidden xl:block bg-primary top-50 left-50 h-[280px] w-[500px] rounded-xl absolute -z-10"></div>
                     </div>
-                    <div className="flex flex-col w-1/2">
-                        <span className="font-display text-2xl mb-6">
+                    <div className="flex flex-col items-center xl:items-start w-full xl:w-1/2 text-center xl:text-left">
+                        <span className="font-display text-2xl mb-6 w-[80%] xl:w-full">
                             Wialon Local работает в TAS-IX
                         </span>
                         <Swiper
-                            className="max-h-[150px]"
+                            className="max-h-[120px] xl:max-h-[150px]"
                             direction={"vertical"}
                             spaceBetween={30}
                             loop={true}
@@ -42,7 +42,7 @@ export const Software: FC = () => {
                             modules={[Autoplay]}
                         >
                             <SwiperSlide>
-                                <p className="text-tiny">
+                                <p className="text-xs xl:text-tiny">
                                     С помощью данной программы Вы сможете
                                     контролировать автомобили в режиме реального
                                     времени, отправлять команды (например,
@@ -53,7 +53,7 @@ export const Software: FC = () => {
                                 </p>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <p className="text-tiny">
+                                <p className="text-xs xl:text-tiny">
                                     Wialon Local вобрал в себя всё самое лучшее
                                     от существующих облачных решений: богатый
                                     функционал, для работы с которым не
@@ -64,7 +64,7 @@ export const Software: FC = () => {
                                 </p>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <p className="text-tiny">
+                                <p className="text-xs xl:text-tiny">
                                     Современная система GPS /ГЛОНАСС
                                     мониторинга&nbsp; Широкие технические
                                     возможности&nbsp; Максимально удобный в

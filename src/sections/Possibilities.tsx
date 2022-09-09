@@ -89,7 +89,7 @@ export const Possibilities: FC = () => {
             <div className="container flex flex-col items-center">
                 <h1 className="font-display text-display mb-54">Возможности</h1>
                 <div className="flex items-start w-full">
-                    <div className="grid grid-cols-4 gap-44 w-1/2">
+                    <div className="grid grid-cols-1 xl:grid-cols-4 gap-44 w-1/2">
                         {possibilities.map(
                             ({ image, title }, index: number) => (
                                 <div
