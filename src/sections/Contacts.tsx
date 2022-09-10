@@ -23,13 +23,13 @@ export const Contacts: FC = () => {
                 <div className="flex flex-col xl:flex-row justify-center items-center relative">
                     {isLoaded && (
                         <Map
-                        className="mb-24 xl:mb-0"
+                            className="mb-24 xl:mb-0"
                             defaultState={{
                                 center: [42.47422942766454, 59.61304045092482],
                                 zoom: 17,
                             }}
-                            height={isMobile ? 240 : 540}
-                            width={isMobile ? 375 : 920}
+                            height={240}
+                            width={375}
                         >
                             <Placemark
                                 geometry={[

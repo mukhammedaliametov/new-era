@@ -1,18 +1,19 @@
 import Image from "next/image";
 import { FC, useState } from "react";
+import { useDeviceDetector } from "../hooks/useDeciveDecetor";
 
 export const Header: FC = () => {
     const [isActive, setActive] = useState(false);
-
+    const {isMobile} = useDeviceDetector()
     const handleActive = () => setActive(prevState => !prevState);
 
     return (
         <header
-            className={`flex justify-center items-center bg-primary ${
+            className={`flex justify-center ${isMobile ? 'flex-start' : 'items-center'} bg-primary ${
                 isActive ? "h-[220px]" : "h-54"
-            } lg:h-[72px] w-full px-24 fixed z-10`}
+            } lg:h-[72px] w-full px-20 fixed z-10`}
         >
-            <div className="container flex items-center justify-between flex-wrap">
+            <div className="container flex items-center justify-between flex-wrap max-h-[48px] pt-4 xl:pt-0">
                 <div className="flex items-center flex-shrink-0 text-secondary mr-32">
                     <Image
                         src="/assets/images/logo.svg"
@@ -24,11 +25,11 @@ export const Header: FC = () => {
                 </div>
                 <div className="block lg:hidden font-body">
                     <button
-                        className="flex items-center px-3 py-2 border rounded border-teal-400 hover:border-white"
+                        className="flex items-center rounded"
                         onClick={handleActive}
                     >
                         <svg
-                            className="fill-current h-3 w-3"
+                            className="fill-current h-24 w-24"
                             viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg"
                         >
@@ -39,7 +40,7 @@ export const Header: FC = () => {
                 </div>
                 <div
                     className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto font-body ${
-                        isActive ? "" : "translate-y-[-120%]"
+                        isActive ? "translate-y-[12px]" : "translate-y-[-150%]"
                     } lg:translate-y-0`}
                 >
                     <div className="text-sm lg:flex-grow">
