@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 const sendRequest = async (message: string) => {
     const { BOT_TOKEN, BOT_CHAT_ID } = process.env;
     const response = await fetch(
-        `https://api.telegram.org/bot${BOT_TOKEN}/sendmessage?chat_id=${BOT_CHAT_ID}&text=${message}`
+        `https://api.telegram.org/bot${`5759961173:AAH_CRbpu_FYfStNHWMAqeGbD0VmIn24YLo`}/sendmessage?chat_id=${`-704118707`}&text=${message}`
     );
 
     if (response.status === 200) {
