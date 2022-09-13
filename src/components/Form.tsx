@@ -19,6 +19,8 @@ export const Form: FC = () => {
                     "Content-type": "application/json; charset=UTF-8",
                 },
             });
+
+            setTimeout(() => handleModal(false), 500);
         },
     });
 
@@ -57,10 +59,7 @@ export const Form: FC = () => {
                     onChange={formik.handleChange}
                     value={formik.values.phone}
                 />
-                <Button
-                    color="black"
-                    type="submit"
-                >
+                <Button color="black" type="submit">
                     Отправить
                 </Button>
             </form>
