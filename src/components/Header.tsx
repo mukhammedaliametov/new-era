@@ -11,7 +11,7 @@ export const Header: FC = () => {
         <header
             className={`flex justify-center ${isMobile ? 'flex-start' : 'items-center'} bg-primary ${
                 isActive ? "h-[220px]" : "h-54"
-            } lg:h-[72px] w-full px-20 fixed z-10`}
+            } lg:h-[72px] w-full px-20 fixed z-10 transition-all delay-100`}
         >
             <div className="container flex items-center justify-between flex-wrap max-h-[48px] pt-4 xl:pt-0">
                 <div className="flex items-center flex-shrink-0 text-secondary mr-32">
@@ -41,7 +41,7 @@ export const Header: FC = () => {
                 <div
                     className={`w-full block flex-grow lg:flex lg:items-center lg:w-auto font-body ${
                         isActive ? "translate-y-[12px]" : "translate-y-[-150%]"
-                    } lg:translate-y-0`}
+                    } lg:translate-y-0 transition-transform delay-100`}
                 >
                     <div className="text-sm lg:flex-grow">
                         <a
