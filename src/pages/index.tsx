@@ -16,6 +16,57 @@ const Home: NextPage = () => {
         <ModalContextProvider>
             <Layout>
                 <Head>
+                    <link
+                        rel="apple-touch-icon-precomposed"
+                        sizes="57x57"
+                        href="/assets/favicon/apple-touch-icon-57x57.png"
+                    />
+                    <link
+                        rel="apple-touch-icon-precomposed"
+                        sizes="114x114"
+                        href="/assets/favicon/apple-touch-icon-114x114.png"
+                    />
+                    <link
+                        rel="apple-touch-icon-precomposed"
+                        sizes="72x72"
+                        href="/assets/favicon/apple-touch-icon-72x72.png"
+                    />
+                    <link
+                        rel="apple-touch-icon-precomposed"
+                        sizes="144x144"
+                        href="/assets/favicon/apple-touch-icon-144x144.png"
+                    />
+                    <link
+                        rel="apple-touch-icon-precomposed"
+                        sizes="120x120"
+                        href="/assets/favicon/apple-touch-icon-120x120.png"
+                    />
+                    <link
+                        rel="apple-touch-icon-precomposed"
+                        sizes="152x152"
+                        href="/assets/favicon/apple-touch-icon-152x152.png"
+                    />
+                    <link
+                        rel="icon"
+                        type="image/png"
+                        href="/assets/favicon/favicon-32x32.png"
+                        sizes="32x32"
+                    />
+                    <link
+                        rel="icon"
+                        type="image/png"
+                        href="/assets/favicon/favicon-16x16.png"
+                        sizes="16x16"
+                    />
+                    <meta
+                        name="application-name"
+                        content="NEW ERA - СИСТЕМЫ GPS МОНИТОРИНГА ТРАНСПОРТА"
+                    />
+                    <meta name="msapplication-TileColor" content="#000000" />
+                    <meta
+                        name="msapplication-TileImage"
+                        content="/assets/favicon/mstile-144x144.png"
+                    />
                     <title>
                         ПРОДУКТ - СИСТЕМЫ GPS МОНИТОРИНГА ТРАНСПОРТА ЭТО ГОТОВЫЕ
                         РЕШЕНИЯ, ПРЕДНАЗНАЧЕННЫЕ ДЛЯ ОПТИМИЗАЦИИ ЗАТРАТ И
