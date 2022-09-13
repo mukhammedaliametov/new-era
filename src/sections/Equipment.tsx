@@ -14,30 +14,54 @@ const slides = [
         title: "ДАТЧИК УРОВНЯ ТОПЛИВА OMNICOMM LLS 5",
         description:
             "Это высокоточные датчики уровня топлива, предназначенные для измерения уровня топлива в топливном баке транспортного средства. Датчики подключаются к терминалу системы мониторинга транспорта и передают на него значения уровня топлива.",
+        file: "1.pdf"
     },
     {
         image: "2.webp",
         title: "GPS ТРЕКЕР TELTONIKA FMB 125",
         description:
             "Мониторинг транспорта с контролем топлива. \nУстанавливается на любое транспортное средство, с подключением до 5 датчиков уровня топлива",
+        file: "2.pdf"
     },
     {
         image: "3.png",
         title: "GPS ТРЕКЕР TELTONIKA FMB 920",
         description:
             "Устанавливается на транспортные средства, имеющие пластиковую приборную панель, без подключения датчика уровня топлива",
+        file: "3.pdf"
+
     },
     {
         image: "4.jpg",
         title: "ПЕРВЫЙ В МИРЕ БЕСПРОВОДНОЙ ДАТЧИК УРОВНЯ ТОПЛИВА ЭСКОРТ TD-BLE",
         description:
             "Отсуствие вандализма связанного с проводами\n Литий-тионилхлоридная батарея со сроком работы более 7 лет\n Корпус датчика оснащен дополнительным защитным кожухом из ударапрочного полиамида, стойкого к механическим повреждениям",
+        file: "4.jpg"
     },
     {
         image: "5.jpg",
         title: "ДАТЧИК УРОВНЯ ТОПЛИВА ЭСКОРТ ТД 150",
         description:
             "Это высокоточные датчики уровня топлива, предназначенные для измерения уровня топлива в топливном баке транспортного средства. Датчики подключаются к терминалу системы мониторинга транспорта и передают на него значения уровня топлива.",
+        file: "5.pdf"
+    },
+    {
+        image: "6.jpg",
+        title: "Видеокамера купольная для транспорта с ИК-подсветкой антивандальная",
+        description: "Антивандальная AHD камера предназначена для использования в автотранспорте. Камера имеет чувствительный CMOS сенсор и разрешение Full HD (1920×1080), что позволяет получить качественное видеоизображение в высоком разрешении и с отличной детализацией. Камера оснащена фиксированным объективом 2.8 или 3.6 мм.",
+        file: "#"
+    },
+    {
+        image: "7.jpg",
+        title: "Автомобильный видеорегистратор на 5 видеокамеры",
+        description: "Автомобильный видеорегистратор на 5 видеокамеры MA-MDVR04 SD разрешением 1080p эконом-класса предназначен для установки на транспортных средствах при условии ограниченного бюджета.",
+        file: "#"
+    },
+    {
+        image: "8.jpg",
+        title: "Bluetooth маяк Teltonika Blue PUCK RHT",
+        description: "это компактный передатчик данных со встроенными датчиками температуры и влажности. Данная модель представляет решение для систем мониторинга, используемых в широком спектре сфер деятельности, где требуется отслеживание состояний, зависимых от температуры и влажности.",
+        file: "8.pdf"
     },
 ];
 
@@ -46,7 +70,7 @@ export const Equipment: FC = () => {
         <section className="flex justify-center items-center">
             <div className="container flex flex-col items-center py-32 px-16">
                 <Typography type="h1" color="black">
-                    Оборудование
+                    Новые продукты
                 </Typography>
                 <div className="flex">
                     <Swiper
@@ -59,7 +83,7 @@ export const Equipment: FC = () => {
                         modules={[Navigation, Pagination, Autoplay, A11y]}
                         navigation
                     >
-                        {slides.map(({ image, title, description }) => (
+                        {slides.map(({ image, title, description, file }) => (
                             <SwiperSlide key={image}>
                                 <div className="flex flex-col xl:flex-row items-center h-full w-full px-32 pr-44">
                                     <div className="flex justify-center shrink-0 items-center xl:mr-32">
@@ -77,11 +101,13 @@ export const Equipment: FC = () => {
                                         <span className="text-tiny mb-36">
                                             {description}
                                         </span>
-                                        <Button
-                                            color="primary"
+                                        <a
+                                            href={`/assets/ffs/${file}`}
+                                            className="flex justify-center items-center bg-primary font-bold text-sm xl:text-tiny h-54 xl:h-64 w-[240px] xl:w-[400px] cursor-pointer"
+                                            download
                                         >
                                             Скачать флаер
-                                        </Button>
+                                        </a>
                                     </div>
                                 </div>
                             </SwiperSlide>
