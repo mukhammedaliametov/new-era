@@ -45,7 +45,7 @@ export const Form: FC = () => {
                 </span>
                 <input
                     name="name"
-                    type="tel"
+                    type="text"
                     className="w-full mb-12 p-12 py-16 rounded"
                     placeholder="Введите имя"
                     onChange={formik.handleChange}
