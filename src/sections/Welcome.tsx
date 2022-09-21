@@ -34,7 +34,7 @@ export const Welcome: FC = () => {
                         ПОВЫШЕНИЯ ЭФФЕКТИВНОСТИ ИСПОЛЬЗОВАНИЯ ВАШЕГО АВТОПАРКА
                     </h1>
                     <Button
-                        onClick={() => handleModal(true)}
+                        onClick={() => handleModal(1)}
                         color="primary"
                     >
                         Получить консультацию

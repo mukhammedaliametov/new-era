@@ -1,10 +1,12 @@
 import Image from "next/image";
 import { FC, useState } from "react";
+import { useModal } from "../hooks/handleModal";
 import { useDeviceDetector } from "../hooks/useDeciveDecetor";
 
 export const Header: FC = () => {
     const [isActive, setActive] = useState(false);
     const { isMobile } = useDeviceDetector();
+    const {handleModal} = useModal()
     const handleActive = () => setActive(prevState => !prevState);
 
     return (
@@ -47,13 +49,13 @@ export const Header: FC = () => {
                             </svg>
                             +99899 194-94-94
                         </a>
-                        <button className="bg-primary py-12 px-28 mr-16 rounded">
+                        <button className="bg-primary py-12 px-28 mr-16 rounded" onClick={() => handleModal(1)}>
                             Позвоните мне
                         </button>
                         <button className="bg-primary py-12 px-28 mr-16 rounded">
                             Получить коммерческое
                         </button>
-                        <button className="bg-primary py-12 px-28 rounded">
+                        <button className="bg-primary py-12 px-28 rounded" onClick={() => handleModal(2)}>
                             Заказать тест
                         </button>
                     </div>

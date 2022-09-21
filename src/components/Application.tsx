@@ -4,12 +4,13 @@ import { useModal } from "../hooks/handleModal";
 import { Button } from "./ui";
 import InputMask from "react-input-mask";
 
-export const Form: FC = () => {
+export const Application: FC = () => {
     const { isActive, handleModal } = useModal();
 
     const formik = useFormik({
         initialValues: {
             name: "",
+            car: "",
             phone: "",
         },
         onSubmit: (data: any) => {
@@ -28,7 +29,7 @@ export const Form: FC = () => {
     return (
         <div
             className={`${
-                isActive === 1 ? "flex" : "hidden"
+                isActive === 2 ? "flex" : "hidden"
             } justify-center items-center bg-black/80 h-screen w-full fixed top-0 z-20 px-32 xl:px-0`}
             onClick={() => handleModal(false)}
         >
@@ -37,12 +38,9 @@ export const Form: FC = () => {
                 onSubmit={formik.handleSubmit}
                 onClick={e => e.stopPropagation()}
             >
-                <h1 className="font-bold text-xl mb-10">
-                    Получить консультацию
-                </h1>
+                <h1 className="font-bold text-xl mb-10">Получить тест</h1>
                 <span className="mb-12">
-                    Перезвоним в течение 10 минут и ответим на все интересующие
-                    вопросы
+                    Тестовое оснащение проводится только в Каракалпакистане
                 </span>
                 <input
                     name="name"
@@ -52,15 +50,23 @@ export const Form: FC = () => {
                     onChange={formik.handleChange}
                     value={formik.values.name}
                 />
+                <input
+                    name="car"
+                    type="text"
+                    className="w-full mb-12 p-12 py-16 rounded"
+                    placeholder="Введите модель машины"
+                    onChange={formik.handleChange}
+                    value={formik.values.car}
+                />
                 <InputMask
-                        name="phone"
-                        className="w-full mb-12 p-12 py-16 rounded"
-                        mask="+\9\9\8 99 999 99 99"
-                        // maskChar=" "
-                        placeholder="Введите телефон*"
-                        onChange={formik.handleChange}
-                        value={formik.values.phone}
-                    />
+                    name="phone"
+                    className="w-full mb-12 p-12 py-16 rounded"
+                    mask="+\9\9\8 99 999 99 99"
+                    // maskChar=" "
+                    placeholder="Введите телефон*"
+                    onChange={formik.handleChange}
+                    value={formik.values.phone}
+                />
                 <Button color="black" type="submit">
                     Отправить
                 </Button>
