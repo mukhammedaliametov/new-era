@@ -9,9 +9,9 @@ export const Header: FC = () => {
 
     return (
         <header
-            className={`flex justify-center ${isMobile ? 'flex-start' : 'items-center'} bg-primary ${
+            className={`flex justify-center ${isMobile ? 'flex-start' : 'items-center'} bg-white ${
                 isActive ? "h-[220px]" : "h-54"
-            } lg:h-[72px] w-full px-20 fixed z-10 transition-all delay-100`}
+            } lg:h-[92px] w-full px-20 fixed z-20 transition-all delay-100 border-b-2`}
         >
             <div className="container flex items-center justify-between flex-wrap max-h-[48px] pt-4 xl:pt-0">
                 <div className="flex items-center flex-shrink-0 text-secondary mr-32">
@@ -51,16 +51,16 @@ export const Header: FC = () => {
                             О компании
                         </a>
                         <a
-                            href="#software"
-                            className="block mt-4 lg:inline-block lg:mt-0 mr-18"
-                        >
-                            Программное обеспечение
-                        </a>
-                        <a
                             href="#possibilities"
                             className="block mt-4 lg:inline-block lg:mt-0 mr-18"
                         >
                             Возможности
+                        </a>
+                        <a
+                            href="#software"
+                            className="block mt-4 lg:inline-block lg:mt-0 mr-18"
+                        >
+                            Программное обеспечение
                         </a>
                         <a
                             href="#software"

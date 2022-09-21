@@ -25,11 +25,10 @@ export const Welcome: FC = () => {
     };
 
     return (
-        <section className={`flex w-full bg-welcome relative`}>
-            <div className="block h-full w-full bg-black/50 absolute" />
-            <div className="flex justify-center items-center bg-black/70 h-full w-full top-0 left-0 absolute">
-                <div className="container flex flex-col justify-center items-center text-primary p-24">
-                    <h1 className="font-display text-sm md:text-xl xl:text-3xl w-full xl:w-[720px] mt-72  mb-32 leading-5 xl:leading-9 uppercase text-center">
+        <section className={`flex justify-center w-full relative bg-welcome bg-[length:459px_290px]  md:bg-[length:1020px_681px] bg-no-repeat bg-right-bottom`}>
+            <div className="container flex items-center">
+                <div className="flex flex-col justify-center items-center md:items-start text-black p-24">
+                    <h1 className="font-display text-sm md:text-xl xl:text-3xl w-full xl:w-[720px] md:mt-72 mb-20 leading-5 xl:leading-9 uppercase text-center md:text-left">
                         NEW ERA - СИСТЕМЫ GPS МОНИТОРИНГА ТРАНСПОРТА ЭТО ГОТОВЫЕ
                         РЕШЕНИЯ, ПРЕДНАЗНАЧЕННЫЕ ДЛЯ ОПТИМИЗАЦИИ ЗАТРАТ И
                         ПОВЫШЕНИЯ ЭФФЕКТИВНОСТИ ИСПОЛЬЗОВАНИЯ ВАШЕГО АВТОПАРКА
@@ -37,7 +36,6 @@ export const Welcome: FC = () => {
                     <Button
                         onClick={() => handleModal(true)}
                         color="primary"
-                        className="animate-bounce"
                     >
                         Получить консультацию
                     </Button>

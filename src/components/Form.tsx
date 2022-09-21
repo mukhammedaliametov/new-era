@@ -28,7 +28,7 @@ export const Form: FC = () => {
         <div
             className={`${
                 isActive ? "flex" : "hidden"
-            } justify-center items-center bg-black/60 h-screen w-full fixed top-0 z-20 px-32 xl:px-0`}
+            } justify-center items-center bg-black/80 h-screen w-full fixed top-0 z-20 px-32 xl:px-0`}
             onClick={() => handleModal(false)}
         >
             <form

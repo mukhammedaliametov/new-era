@@ -4,7 +4,7 @@ module.exports = {
     theme: {
         extend: {
             backgroundImage: {
-                welcome: "url('/assets/images/welcome-bg.jpg')",
+                welcome: "url('/assets/images/l234k.png')",
             },
             spacing: {
                 2: '2px',

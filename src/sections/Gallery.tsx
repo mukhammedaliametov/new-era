@@ -1,0 +1,37 @@
+import Image from "next/image";
+import { FC } from "react";
+
+const images = [
+    "photo_2022-09-21_05-56-24",
+    "photo_2022-09-21_05-56-28",
+    "photo_2022-09-21_05-56-34",
+    "photo_2022-09-21_05-56-38",
+    "photo_2022-09-21_05-56-43",
+    "photo_2022-09-21_05-56-48",
+    "photo_2022-09-21_05-56-53",
+    "photo_2022-09-21_05-57-00",
+    "photo_2022-09-21_05-57-06",
+];
+
+export const Gallery: FC = () => {
+    return (
+        <section id="gallery h-screen">
+            <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-3">
+                {images.map((image: string) => (
+                    <div
+                        key={image}
+                        className="block h-[400px] w-full relative"
+                    >
+                        <div className="block bg-black/20 h-full w-full absolute z-10" />
+                        <Image
+                            src={`/assets/images/gallery/${image}.jpg`}
+                            objectFit="cover"
+                            layout="fill"
+                            alt=""
+                        />
+                    </div>
+                ))}
+            </div>
+        </section>
+    );
+};

@@ -4,7 +4,7 @@ import { Typography } from "../components/ui";
 
 const possibilities = [
     {
-        image: "ps1",
+        image: "ps1.png",
         title: "Контроль текущего местоположения транспорта",
         options: [
             "Выявление несанкционированных рейсов",
@@ -13,7 +13,7 @@ const possibilities = [
         ],
     },
     {
-        image: "ps2",
+        image: "ps2.png",
         title: "Контроль расхода топлива с использованием датчика уровня топлива",
         options: [
             "Учёт заправок/сливов топлива",
@@ -22,7 +22,7 @@ const possibilities = [
         ],
     },
     {
-        image: "ps3",
+        image: "ps3.png",
         title: "Контроль пробега \nтранспортного средства",
         options: [
             "Автоматическое оповещение о необходимости прохождения ТО",
@@ -31,7 +31,7 @@ const possibilities = [
         ],
     },
     {
-        image: "ps4",
+        image: "ps4.png",
         title: "Контроль над посещением обозначенных геозон",
         options: [
             "Контроль выполнения маршрутного задания",
@@ -41,7 +41,7 @@ const possibilities = [
         ],
     },
     {
-        image: "ps5",
+        image: "ps5.png",
         title: "Контроль над соблюдением Скоростного режима",
         options: [
             "Отслеживание параметров движения",
@@ -49,7 +49,7 @@ const possibilities = [
         ],
     },
     {
-        image: "ps6",
+        image: "ps6.png",
         title: "Контроль над деятельностью водителей",
         options: [
             "Выявление простоев, нарушение графика",
@@ -61,7 +61,7 @@ const possibilities = [
         ],
     },
     {
-        image: "ps7",
+        image: "ps7.png",
         title: "Контроль работы дополнительного оборудования",
         options: [
             "Учёт времени и режимов работы любых механизмов и агрегатов: двигателя автомобиля, генераторов, компрессоров, кранов, навесного оборудования и т.д.",
@@ -71,7 +71,7 @@ const possibilities = [
         ],
     },
     {
-        image: "ps8",
+        image: "ps8.png",
         title: "Составление аналитических отчетов по всем параметрам работы автотранспорта",
         options: [
             'Функция "Быстрый отчёт" за выбранный период времени',
@@ -86,52 +86,50 @@ export const Possibilities: FC = () => {
     const [selectedPoss, setSelectedPoss] = useState(0);
 
     return (
-        <section id="possibilities" className="flex justify-center items-center bg-primary">
-            <div className="container flex flex-col items-center py-32 px-16">
-                <Typography type="h1" color="black">Возможности</Typography>
-                <div className="flex flex-col-reverse xl:flex-row items-start w-full">
-                    <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 xl:gap-12  w-full xl:w-1/2">
-                        {possibilities.map(
-                            ({ image, title }, index: number) => (
-                                <div
-                                    key={image}
-                                    className={`flex flex-col items-center bg-white text-black min-h-[160px] min-w-[120px] py-24 px-12 rounded-xl cursor-pointer border-4 ${
-                                        selectedPoss === index
-                                            ? "border-black/80"
-                                            : "border-primary"
-                                    }`}
-                                    onClick={() => setSelectedPoss(index)}
-                                >
-                                    <Image
-                                        className="text-primary"
-                                        src={`/assets/icons/${image}.svg`}
-                                        height={54}
-                                        width={54}
-                                        alt=""
-                                        style={{ color: "red" }}
-                                    />
-                                    <span className="font-bold mt-12 text-xs text-center">
+        <section
+            id="possibilities"
+            className="flex justify-center items-center"
+        >
+            <div className="container flex flex-col items-center py-32">
+                <Typography type="h1" color="black">
+                    Возможности
+                </Typography>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 xl:gap-12 w-full">
+                    {possibilities.map(
+                        ({ image, title, options }, index: number) => (
+                            <div
+                                key={image}
+                                className={`flex flex-col min-h-[200px] min-w-[120px] p-24 md:rounded-xl cursor-pointer md:border-2 ${
+                                    selectedPoss === index
+                                        ? "bg-primary border-primary"
+                                        : "bg-white text-black border-black/10"
+                                }`}
+                                onClick={() => setSelectedPoss(index)}
+                            >
+                                <div className="flex flex-col md:flex-row items-center mb-24 text-center md:text-left">
+                                    <div className="flex mb-20 md:mb-0 md:mr-24 shrink-0">
+                                        <Image
+                                            className="text-primary"
+                                            src={`/assets/icons/${image}`}
+                                            height={100}
+                                            width={100}
+                                            quality={100}
+                                            alt=""
+                                            style={{ color: "red" }}
+                                        />
+                                    </div>
+                                    <span className="font-bold text-md">
                                         {title}
                                     </span>
                                 </div>
-                            )
-                        )}
-                    </div>
-                    <div className="flex flex-col items-center xl:items-start w-full xl:w-1/2 px-36 mb-24 :xlmb-0 text-center xl:text-left">
-                        <span className="font-display text-lg xl:text-2xl mb-12 xl:mb-24">
-                            {possibilities[selectedPoss].title}
-                        </span>
-                        {possibilities[selectedPoss].options.map(
-                            (option: string, index: number) => (
-                                <div
-                                    key={`option__${index}`}
-                                    className="flex font-bold text-xs md:text-tiny mb-12 last:mb-0"
-                                >
-                                    - {option}
+                                <div className="flex flex-col px-24 text-center md:text-left">
+                                    {options.map(option => (
+                                        <span key={option} className="text-sm mb-4">&#8722; {option}</span>
+                                    ))}
                                 </div>
-                            )
-                        )}
-                    </div>
+                            </div>
+                        )
+                    )}
                 </div>
             </div>
         </section>

@@ -1,6 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import { Footer } from "../components/Footer";
 import { Layout } from "../components/Layout";
+import { Request } from "../components/Request";
 import ModalContextProvider from "../HOC/ModalContext";
 import {
     About,
@@ -10,6 +12,7 @@ import {
     Software,
     Welcome,
 } from "../sections";
+import { Gallery } from "../sections/Gallery";
 
 const Home: NextPage = () => {
     return (
@@ -81,10 +84,13 @@ const Home: NextPage = () => {
                 <main className="font-body">
                     <Welcome />
                     <About />
-                    <Software />
                     <Possibilities />
+                    <Request />
+                    <Software />
+                    <Gallery />
                     <Equipment />
                     <Contacts />
+                    <Footer />
                 </main>
             </Layout>
         </ModalContextProvider>
