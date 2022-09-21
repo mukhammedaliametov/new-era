@@ -57,7 +57,7 @@ export const Software: FC = () => {
                                 </li>
                             </ul>
                             <Button
-                                onClick={() => handleModal(true)}
+                                onClick={() => handleModal(1)}
                                 color="primary"
                             >
                                 Узнать подробнее

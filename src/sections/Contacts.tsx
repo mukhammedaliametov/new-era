@@ -114,7 +114,7 @@ export const Contacts: FC = () => {
                         </a>
                     </div>
                     <Button
-                        onClick={() => handleModal(true)}
+                        onClick={() => handleModal(1)}
                         color="black"
                         className="w-full"
                     >

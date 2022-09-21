@@ -6,74 +6,128 @@ import Image from "next/image";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Button, Typography } from "../components/ui";
-
-const slides = [
-    {
-        image: "1.png",
-        title: "ДАТЧИК УРОВНЯ ТОПЛИВА OMNICOMM LLS 5",
-        description:
-            "Это высокоточные датчики уровня топлива, предназначенные для измерения уровня топлива в топливном баке транспортного средства. Датчики подключаются к терминалу системы мониторинга транспорта и передают на него значения уровня топлива.",
-        file: "1.pdf",
-    },
-    {
-        image: "2.webp",
-        title: "GPS ТРЕКЕР TELTONIKA FMB 125",
-        description:
-            "Мониторинг транспорта с контролем топлива. \nУстанавливается на любое транспортное средство, с подключением до 5 датчиков уровня топлива",
-        file: "2.pdf",
-    },
-    {
-        image: "3.png",
-        title: "GPS ТРЕКЕР TELTONIKA FMB 920",
-        description:
-            "Устанавливается на транспортные средства, имеющие пластиковую приборную панель, без подключения датчика уровня топлива",
-        file: "3.pdf",
-    },
-    {
-        image: "4.jpg",
-        title: "ПЕРВЫЙ В МИРЕ БЕСПРОВОДНОЙ ДАТЧИК УРОВНЯ ТОПЛИВА ЭСКОРТ TD-BLE",
-        description:
-            "Отсуствие вандализма связанного с проводами\n Литий-тионилхлоридная батарея со сроком работы более 7 лет\n Корпус датчика оснащен дополнительным защитным кожухом из ударапрочного полиамида, стойкого к механическим повреждениям",
-        file: "4.jpg",
-    },
-    {
-        image: "5.jpg",
-        title: "ДАТЧИК УРОВНЯ ТОПЛИВА ЭСКОРТ ТД 150",
-        description:
-            "Это высокоточные датчики уровня топлива, предназначенные для измерения уровня топлива в топливном баке транспортного средства. Датчики подключаются к терминалу системы мониторинга транспорта и передают на него значения уровня топлива.",
-        file: "5.pdf",
-    },
-    {
-        image: "6.jpg",
-        title: "Видеокамера купольная для транспорта с ИК-подсветкой антивандальная",
-        description:
-            "Антивандальная AHD камера предназначена для использования в автотранспорте. Камера имеет чувствительный CMOS сенсор и разрешение Full HD (1920×1080), что позволяет получить качественное видеоизображение в высоком разрешении и с отличной детализацией. Камера оснащена фиксированным объективом 2.8 или 3.6 мм.",
-        file: "#",
-    },
-    {
-        image: "7.jpg",
-        title: "Автомобильный видеорегистратор на 5 видеокамеры",
-        description:
-            "Автомобильный видеорегистратор на 5 видеокамеры MA-MDVR04 SD разрешением 1080p эконом-класса предназначен для установки на транспортных средствах при условии ограниченного бюджета.",
-        file: "#",
-    },
-    {
-        image: "8.jpg",
-        title: "Bluetooth маяк Teltonika Blue PUCK RHT",
-        description:
-            "это компактный передатчик данных со встроенными датчиками температуры и влажности. Данная модель представляет решение для систем мониторинга, используемых в широком спектре сфер деятельности, где требуется отслеживание состояний, зависимых от температуры и влажности.",
-        file: "8.pdf",
-    },
-];
+import { Typography } from "../components/ui";
 
 export const Equipment: FC = () => {
     return (
         <section className="flex justify-center items-center">
-            <div className="flex flex-col items-center py-32 px-16">
-                <Typography type="h1" color="black">
+            <div className="flex flex-col items-center w-full">
+                {/* <Typography type="h1" color="black">
                     Новые продукты
-                </Typography>
+                </Typography> */}
+                <div className="flex flex-col w-full">
+                    <div className="flex justify-center items-center bg-primary">
+                        <div className="container flex items-center py-32">
+                            <div className="flex justify-center items-center h-[400px] w-1/2 relative">
+                                <Image
+                                    src={`/assets/images/slides/3.png`}
+                                    layout="fill"
+                                    objectFit="cover"
+                                    alt=""
+                                />
+                            </div>
+                            <div className="flex flex-col w-1/2">
+                                <span className="text-tiny">
+                                    МОНИТОРИНГ ТРАНСПОРТА
+                                </span>
+                                <span className="text-tiny mb-8">
+                                    GPS ТРЕКЕР{" "}
+                                    <strong>TELTONIKA FMB 920</strong>
+                                </span>
+                                <span className="mb-12">
+                                    Устанавливается на транспортные средства,
+                                    имеющие пластиковую приборную панель, без
+                                    подключения датчика уровня топлива
+                                </span>
+                                <a
+                                    href="/assets/ffs/1.pdf"
+                                    className="bg-black text-primary py-12 px-20 cursor-pointer rounded max-w-fit"
+                                    download
+                                >
+                                    Скачать флаер
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex justify-center items-center">
+                        <div className="container flex items-center py-32">
+                            <div className="flex flex-col w-1/2">
+                                <span className="text-tiny">
+                                    МОНИТОРИНГ ТРАНСПОРТА С КОНТРОЛЕМ ТОПЛИВА
+                                </span>
+                                <span className="mb-8">
+                                    Удаленный контроль расхода топлива
+                                    возможен&nbsp; после установки GPS трекера
+                                    FMB 125 и датчиков&nbsp; уровня топлива на
+                                    выбор OMNICOMM LLS 5 или&nbsp; ЭСКОРТ ТД 150
+                                </span>
+                                <span className="text-tiny mb-8">
+                                    GPS ТРЕКЕР{" "}
+                                    <strong>TELTONIKA FMB 125</strong>
+                                </span>
+                                <span className="mb-12">
+                                    Устанавливается на любое транспортное
+                                    средство, с подключением до 5 датчиков
+                                    уровня топлива
+                                </span>
+                                <a
+                                    href="/assets/ffs/1.pdf"
+                                    className="bg-primary py-12 px-20 cursor-pointer rounded max-w-fit"
+                                    download
+                                >
+                                    Скачать флаер
+                                </a>
+                            </div>
+                            <div className="flex justify-center items-center h-[400px] w-1/2 relative">
+                                <Image
+                                    src={`/assets/images/slides/2.png`}
+                                    layout="fill"
+                                    objectFit="contain"
+                                    alt=""
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex justify-center items-center bg-primary">
+                        <div className="container flex items-center py-32">
+                            <div className="flex justify-center items-center h-[400px] w-1/2 relative">
+                                <Image
+                                    src={`/assets/images/slides/4.png`}
+                                    layout="fill"
+                                    objectFit="contain"
+                                    alt=""
+                                />
+                            </div>
+                            <div className="flex flex-col w-1/2">
+                                <span className="text-tiny">
+                                    МОНИТОРИНГ ТРАНСПОРТА С КОНТРОЛЕМ ТОПЛИВА
+                                </span>
+                                <span className="mb-8">
+                                    Удаленный контроль расхода топлива
+                                    возможен&nbsp; после установки GPS трекера
+                                    FMB 125 и датчиков&nbsp; уровня топлива на
+                                    выбор OMNICOMM LLS 5 или&nbsp; ЭСКОРТ ТД 150
+                                </span>
+                                <span className="text-tiny mb-8">
+                                    GPS ТРЕКЕР{" "}
+                                    <strong>TELTONIKA FMB 125</strong>
+                                </span>
+                                <span className="mb-12">
+                                    Устанавливается на любое транспортное
+                                    средство, с подключением до 5 датчиков
+                                    уровня топлива
+                                </span>
+                                <a
+                                    href="/assets/ffs/1.pdf"
+                                    className="bg-black text-primary py-12 px-20 cursor-pointer rounded max-w-fit"
+                                    download
+                                >
+                                    Скачать флаер
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     );
