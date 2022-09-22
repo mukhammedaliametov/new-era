@@ -1,14 +1,12 @@
 import { FC } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination, A11y } from "swiper";
 import Image from "next/image";
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Typography } from "../components/ui";
+import { Button } from "../components/ui";
+import { useModal } from "../hooks/handleModal";
 
 export const Equipment: FC = () => {
+    const { handleModal } = useModal();
+
     return (
         <section className="flex justify-center items-center">
             <div className="flex flex-col items-center w-full">
@@ -80,7 +78,7 @@ export const Equipment: FC = () => {
                             </div>
                             <div className="flex justify-center items-center h-[400px] w-1/2 relative">
                                 <Image
-                                    src={`/assets/images/slides/2.png`}
+                                    src={`/assets/images/slides/4.png`}
                                     layout="fill"
                                     objectFit="contain"
                                     alt=""
@@ -92,7 +90,7 @@ export const Equipment: FC = () => {
                         <div className="container flex items-center py-32">
                             <div className="flex justify-center items-center h-[400px] w-1/2 relative">
                                 <Image
-                                    src={`/assets/images/slides/4.png`}
+                                    src={`/assets/images/slides/2.png`}
                                     layout="fill"
                                     objectFit="contain"
                                     alt=""
@@ -124,6 +122,62 @@ export const Equipment: FC = () => {
                                 >
                                     Скачать флаер
                                 </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex justify-center items-center">
+                        <div className="container grid grid-cols-3 w-full py-32">
+                            <div className="flex flex-col items-center w-full">
+                                <span className="mb-12 text-center">
+                                    ДАТЧИК УРОВНЯ ТОПЛИВА{" "}
+                                    <strong>OMNICOMM LLS 5</strong>
+                                </span>
+                                <div className="flex justify-center items-center h-[480px] w-1/2 relative">
+                                    <Image
+                                        src={`/assets/images/slides/11.png`}
+                                        layout="fill"
+                                        objectFit="contain"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                            <div className="flex flex-col items-center justify-between">
+                                <Button
+                                    onClick={() => handleModal(1)}
+                                    color="primary"
+                                >
+                                    Выбрать оборудивонаие
+                                </Button>
+                                <span className="text-center">
+                                    Это высокоточные датчики уровня топлива,
+                                    предназначенные для измерения уровня топлива
+                                    в топливном баке транспортного средства.
+                                    Датчики подключаются к терминалу системы
+                                    мониторинга транспорта и передают на него
+                                    значения уровня топлива.
+                                </span>
+                                <div className="flex justify-center items-center h-[154px] w-[154px] relative">
+                                    <Image
+                                        src={`/assets/images/slides/40per.png`}
+                                        layout="fill"
+                                        objectFit="contain"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                            <div className="flex flex-col items-center w-full">
+                                <span className="mb-12  text-center">
+                                    ДАТЧИК УРОВНЯ ТОПЛИВА{" "}
+                                    <strong>ЭСКОРТ ТД 150</strong>
+                                </span>
+                                <div className="flex justify-center items-center h-[480px] w-1/2 relative">
+                                    <Image
+                                        src={`/assets/images/slides/5.png`}
+                                        layout="fill"
+                                        objectFit="contain"
+                                        alt=""
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
