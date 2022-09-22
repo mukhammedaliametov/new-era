@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FC } from "react";
+import { useImageModal } from "../hooks/handleImageModal";
 
 const images = [
     "photo_2022-09-21_05-56-24",
@@ -14,6 +15,8 @@ const images = [
 ];
 
 export const Gallery: FC = () => {
+    const { handleOpen } = useImageModal()
+
     return (
         <section id="gallery h-screen">
             <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-3">
@@ -22,11 +25,12 @@ export const Gallery: FC = () => {
                         key={image}
                         className="block h-[400px] w-full relative"
                     >
-                        <div className="block bg-black/20 h-full w-full absolute z-10" />
+                        {/* <div className="block bg-black/20 h-full w-full absolute z-10" /> */}
                         <Image
                             src={`/assets/images/gallery/${image}.jpg`}
                             objectFit="cover"
                             layout="fill"
+                            onClick={() => handleOpen(`/assets/images/gallery/${image}.jpg`)}
                             alt=""
                         />
                     </div>

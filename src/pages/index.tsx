@@ -3,6 +3,7 @@ import Head from "next/head";
 import { Footer } from "../components/Footer";
 import { Layout } from "../components/Layout";
 import { Request } from "../components/Request";
+import ImageModalContextProvider from "../HOC/ImageModalContext";
 import ModalContextProvider from "../HOC/ModalContext";
 import {
     About,
@@ -17,6 +18,7 @@ import { Gallery } from "../sections/Gallery";
 const Home: NextPage = () => {
     return (
         <ModalContextProvider>
+        <ImageModalContextProvider>
             <Layout>
                 <Head>
                     <link
@@ -93,6 +95,7 @@ const Home: NextPage = () => {
                     <Footer />
                 </main>
             </Layout>
+            </ImageModalContextProvider>
         </ModalContextProvider>
     );
 };
