@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import { Button } from "../components/ui";
 import { useModal } from "../hooks/handleModal";
+import { DownloadButton } from "../components/ui/Dowload-button";
 
 export const Equipment: FC = () => {
     const { handleModal } = useModal();
@@ -25,56 +26,38 @@ export const Equipment: FC = () => {
                                 />
                             </div>
                             <div className="flex flex-col w-1/2">
-                                <span className="text-tiny">
+                                <span className="font-bold text-xl text-tiny mb-16">
                                     МОНИТОРИНГ ТРАНСПОРТА
                                 </span>
-                                <span className="text-tiny mb-8">
+                                <span className="text-xl text-tiny mb-16">
                                     GPS ТРЕКЕР{" "}
                                     <strong>TELTONIKA FMB 920</strong>
                                 </span>
-                                <span className="mb-12">
+                                <span className="text-md mb-12">
                                     Устанавливается на транспортные средства,
                                     имеющие пластиковую приборную панель, без
                                     подключения датчика уровня топлива
                                 </span>
-                                <a
-                                    href="/assets/ffs/1.pdf"
-                                    className="bg-black text-primary py-12 px-20 cursor-pointer rounded max-w-fit"
-                                    download
-                                >
-                                    Скачать флаер
-                                </a>
+                                <DownloadButton
+                                    file="1.pdf"
+                                    name="TELTONIKA FMB 920"
+                                    type="black"
+                                />
                             </div>
                         </div>
                     </div>
                     <div className="flex justify-center items-center">
                         <div className="container flex items-center py-32">
                             <div className="flex flex-col w-1/2">
-                                <span className="text-tiny">
-                                    МОНИТОРИНГ ТРАНСПОРТА С КОНТРОЛЕМ ТОПЛИВА
+                                <span className="font-bold text-xl text-tiny mb-8">
+                                    ПЕРВЫЙ В МИРЕ БЕСПРОВОДНОЙ ДАТЧИК УРОВНЯ
+                                    ТОПЛИВА ЭСКОРТ TD-BLE
                                 </span>
-                                <span className="mb-8">
-                                    Удаленный контроль расхода топлива
-                                    возможен&nbsp; после установки GPS трекера
-                                    FMB 125 и датчиков&nbsp; уровня топлива на
-                                    выбор OMNICOMM LLS 5 или&nbsp; ЭСКОРТ ТД 150
-                                </span>
-                                <span className="text-tiny mb-8">
-                                    GPS ТРЕКЕР{" "}
-                                    <strong>TELTONIKA FMB 125</strong>
-                                </span>
-                                <span className="mb-12">
-                                    Устанавливается на любое транспортное
-                                    средство, с подключением до 5 датчиков
-                                    уровня топлива
-                                </span>
-                                <a
-                                    href="/assets/ffs/1.pdf"
-                                    className="bg-primary py-12 px-20 cursor-pointer rounded max-w-fit"
-                                    download
-                                >
-                                    Скачать флаер
-                                </a>
+                                <DownloadButton
+                                    file="1.pdf"
+                                    name="TD BLE"
+                                    type="primary"
+                                />
                             </div>
                             <div className="flex justify-center items-center h-[400px] w-1/2 relative">
                                 <Image
@@ -97,16 +80,16 @@ export const Equipment: FC = () => {
                                 />
                             </div>
                             <div className="flex flex-col w-1/2">
-                                <span className="text-tiny">
+                                <span className="font-bold text-xl text-tiny mb-8">
                                     МОНИТОРИНГ ТРАНСПОРТА С КОНТРОЛЕМ ТОПЛИВА
                                 </span>
-                                <span className="mb-8">
+                                <span className="mb-12">
                                     Удаленный контроль расхода топлива
                                     возможен&nbsp; после установки GPS трекера
                                     FMB 125 и датчиков&nbsp; уровня топлива на
                                     выбор OMNICOMM LLS 5 или&nbsp; ЭСКОРТ ТД 150
                                 </span>
-                                <span className="text-tiny mb-8">
+                                <span className="text-xl text-tiny mb-8">
                                     GPS ТРЕКЕР{" "}
                                     <strong>TELTONIKA FMB 125</strong>
                                 </span>
@@ -115,21 +98,19 @@ export const Equipment: FC = () => {
                                     средство, с подключением до 5 датчиков
                                     уровня топлива
                                 </span>
-                                <a
-                                    href="/assets/ffs/1.pdf"
-                                    className="bg-black text-primary py-12 px-20 cursor-pointer rounded max-w-fit"
-                                    download
-                                >
-                                    Скачать флаер
-                                </a>
+                                <DownloadButton
+                                    file="1.pdf"
+                                    name="TELTONIKA FMB 125"
+                                    type="black"
+                                />
                             </div>
                         </div>
                     </div>
                     <div className="flex justify-center items-center">
                         <div className="container grid grid-cols-3 w-full py-32">
                             <div className="flex flex-col items-center w-full">
-                                <span className="mb-12 text-center">
-                                    ДАТЧИК УРОВНЯ ТОПЛИВА{" "}
+                                <span className="text-xl text-tiny max-w-[400px] mb-20 text-center whitespace-pre-wrap">
+                                    ДАТЧИК УРОВНЯ ТОПЛИВА&nbsp;
                                     <strong>OMNICOMM LLS 5</strong>
                                 </span>
                                 <div className="flex justify-center items-center h-[480px] w-1/2 relative">
@@ -140,6 +121,11 @@ export const Equipment: FC = () => {
                                         alt=""
                                     />
                                 </div>
+                                <DownloadButton
+                                    file="1.pdf"
+                                    name="OMNICOMM LLS 5"
+                                    type="primary"
+                                />
                             </div>
                             <div className="flex flex-col items-center justify-between">
                                 <Button
@@ -166,8 +152,8 @@ export const Equipment: FC = () => {
                                 </div>
                             </div>
                             <div className="flex flex-col items-center w-full">
-                                <span className="mb-12  text-center">
-                                    ДАТЧИК УРОВНЯ ТОПЛИВА{" "}
+                                <span className="text-xl text-tiny max-w-[320px] mb-20 text-center whitespace-pre-wrap">
+                                    ДАТЧИК УРОВНЯ ТОПЛИВА&nbsp;
                                     <strong>ЭСКОРТ ТД 150</strong>
                                 </span>
                                 <div className="flex justify-center items-center h-[480px] w-1/2 relative">
@@ -178,6 +164,11 @@ export const Equipment: FC = () => {
                                         alt=""
                                     />
                                 </div>
+                                <DownloadButton
+                                    file="1.pdf"
+                                    name="ЭСКОРТ ТД 150"
+                                    type="primary"
+                                />
                             </div>
                         </div>
                     </div>
