@@ -9,7 +9,7 @@ export const Equipment: FC = () => {
     const { handleModal } = useModal();
 
     return (
-        <section className="flex justify-center items-center">
+        <section id="equipment" className="flex justify-center items-center">
             <div className="flex flex-col items-center w-full py-32">
                 <Typography type="h1" color="black">
                     Новые продукты

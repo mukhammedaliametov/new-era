@@ -18,7 +18,7 @@ export const Gallery: FC = () => {
     const { handleOpen } = useImageModal()
 
     return (
-        <section id="gallery h-screen">
+        <section id="gallery">
             <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-3">
                 {images.map((image: string) => (
                     <div

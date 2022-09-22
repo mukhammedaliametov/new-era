@@ -97,10 +97,16 @@ export const Header: FC = () => {
                         Программное обеспечение
                     </a>
                     <a
-                        href="#software"
+                        href="#equipment"
                         className="block mt-4 lg:inline-block lg:mt-0 mr-32"
                     >
                         Оборудование
+                    </a>
+                    <a
+                        href="#gallery"
+                        className="block mt-4 lg:inline-block lg:mt-0 mr-32"
+                    >
+                        Галерея
                     </a>
                     <a
                         href="#contacts"
