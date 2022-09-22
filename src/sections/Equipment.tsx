@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
 
-import { Button } from "../components/ui";
+import { Button, Typography } from "../components/ui";
 import { useModal } from "../hooks/handleModal";
 import { DownloadButton } from "../components/ui/Dowload-button";
 
@@ -10,18 +10,89 @@ export const Equipment: FC = () => {
 
     return (
         <section className="flex justify-center items-center">
-            <div className="flex flex-col items-center w-full">
-                {/* <Typography type="h1" color="black">
+            <div className="flex flex-col items-center w-full py-32">
+                <Typography type="h1" color="black">
                     Новые продукты
-                </Typography> */}
-                <div className="flex flex-col w-full">
-                    <div className="flex justify-center items-center bg-primary">
+                </Typography>
+                <div className="flex flex-col items-center w-full">
+                    <div className="container flex justify-center items-center w-full mb-32">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-32">
+                            <div className="flex flex-col items-center w-full text-center">
+                                <div className="flex justify-center items-center h-[300px] w-1/2 mb-24 relative">
+                                    <Image
+                                        src={`/assets/images/slides/6.jpg`}
+                                        layout="fill"
+                                        objectFit="contain"
+                                        alt=""
+                                    />
+                                </div>
+                                <span className="font-bold text-tiny mb-12">
+                                    Видеокамера купольная для транспорта с
+                                    ИК-подсветкой антивандальная
+                                </span>
+                                <span className="text-sm">
+                                    Антивандальная AHD камера предназначена для
+                                    использования в автотранспорте. Камера имеет
+                                    чувствительный CMOS сенсор и разрешение Full
+                                    HD (1920×1080), что позволяет получить
+                                    качественное видеоизображение в высоком
+                                    разрешении и с отличной детализацией. Камера
+                                    оснащена фиксированным объективом 2.8 или
+                                    3.6 мм.
+                                </span>
+                            </div>
+                            <div className="flex flex-col items-center w-full text-center">
+                                <div className="flex justify-center items-center h-[300px] w-1/2 mb-24 relative">
+                                    <Image
+                                        src={`/assets/images/slides/7.jpg`}
+                                        layout="fill"
+                                        objectFit="contain"
+                                        alt=""
+                                    />
+                                </div>
+                                <span className="font-bold text-tiny mb-12">
+                                    Автомобильный видеорегистратор на 5
+                                    видеокамеры
+                                </span>
+                                <span className="text-sm">
+                                    Автомобильный видеорегистратор на 5
+                                    видеокамеры MA-MDVR04 SD разрешением 1080p
+                                    эконом-класса предназначен для установки на
+                                    транспортных средствах при условии
+                                    ограниченного бюджета.
+                                </span>
+                            </div>
+                            <div className="flex flex-col items-center w-full text-center">
+                                <div className="flex justify-center items-center h-[300px] w-1/2 mb-24 relative">
+                                    <Image
+                                        src={`/assets/images/slides/8.jpg`}
+                                        layout="fill"
+                                        objectFit="contain"
+                                        alt=""
+                                    />
+                                </div>
+                                <span className="font-bold text-tiny mb-12">
+                                    Bluetooth маяк Teltonika Blue PUCK RHT
+                                </span>
+                                <span className="text-sm">
+                                    Это компактный передатчик данных со
+                                    встроенными датчиками температуры и
+                                    влажности. Данная модель представляет
+                                    решение для систем мониторинга, используемых
+                                    в широком спектре сфер деятельности, где
+                                    требуется отслеживание состояний, зависимых
+                                    от температуры и влажности.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex justify-center items-center bg-primary w-full">
                         <div className="container flex items-center py-32">
                             <div className="flex justify-center items-center h-[400px] w-1/2 relative">
                                 <Image
-                                    src={`/assets/images/slides/3.png`}
+                                    src={`/assets/images/slides/33.png`}
                                     layout="fill"
-                                    objectFit="cover"
+                                    objectFit="contain"
                                     alt=""
                                 />
                             </div>
@@ -39,14 +110,14 @@ export const Equipment: FC = () => {
                                     подключения датчика уровня топлива
                                 </span>
                                 <DownloadButton
-                                    file="1.pdf"
+                                    file="3.pdf"
                                     name="TELTONIKA FMB 920"
                                     type="black"
                                 />
                             </div>
                         </div>
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center w-full">
                         <div className="container flex items-center py-32">
                             <div className="flex flex-col w-1/2">
                                 <span className="font-bold text-xl text-tiny mb-8">
@@ -54,7 +125,7 @@ export const Equipment: FC = () => {
                                     ТОПЛИВА ЭСКОРТ TD-BLE
                                 </span>
                                 <DownloadButton
-                                    file="1.pdf"
+                                    file="4.jpg"
                                     name="TD BLE"
                                     type="primary"
                                 />
@@ -69,7 +140,7 @@ export const Equipment: FC = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex justify-center items-center bg-primary">
+                    <div className="flex justify-center items-center bg-primary w-full">
                         <div className="container flex items-center py-32">
                             <div className="flex justify-center items-center h-[400px] w-1/2 relative">
                                 <Image
@@ -99,14 +170,14 @@ export const Equipment: FC = () => {
                                     уровня топлива
                                 </span>
                                 <DownloadButton
-                                    file="1.pdf"
+                                    file="2.pdf"
                                     name="TELTONIKA FMB 125"
                                     type="black"
                                 />
                             </div>
                         </div>
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center w-full">
                         <div className="container grid grid-cols-3 w-full py-32">
                             <div className="flex flex-col items-center w-full">
                                 <span className="text-xl text-tiny max-w-[400px] mb-20 text-center whitespace-pre-wrap">
@@ -165,7 +236,7 @@ export const Equipment: FC = () => {
                                     />
                                 </div>
                                 <DownloadButton
-                                    file="1.pdf"
+                                    file="5.pdf"
                                     name="ЭСКОРТ ТД 150"
                                     type="primary"
                                 />
