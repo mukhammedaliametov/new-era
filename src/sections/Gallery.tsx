@@ -31,6 +31,7 @@ export const Gallery: FC = () => {
                             objectFit="cover"
                             layout="fill"
                             onClick={() => handleOpen(`/assets/images/gallery/${image}.jpg`)}
+                            className="hover:cursor-pointer"
                             alt=""
                         />
                     </div>
