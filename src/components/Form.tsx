@@ -15,7 +15,10 @@ export const Form: FC = () => {
         onSubmit: (data: any) => {
             fetch(`/api/request`, {
                 method: "POST",
-                body: JSON.stringify(data),
+                body: JSON.stringify({
+                    ...data,
+                    type: 'ЗВОНОК'
+                }),
                 headers: {
                     "Content-type": "application/json; charset=UTF-8",
                 },

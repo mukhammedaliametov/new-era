@@ -1,12 +1,14 @@
 import Image from "next/image";
 import { FC, useState } from "react";
 import { useModal } from "../hooks/handleModal";
+import { useCommercialFormModal } from "../hooks/useCommercialFormModal";
 import { useDeviceDetector } from "../hooks/useDeciveDecetor";
 
 export const Header: FC = () => {
     const [isActive, setActive] = useState(false);
     const { isMobile } = useDeviceDetector();
     const { handleModal } = useModal();
+    const { handleCommercialModal } = useCommercialFormModal();
     const handleActive = () => setActive(prevState => !prevState);
 
     return (
@@ -17,7 +19,13 @@ export const Header: FC = () => {
                 isActive ? "h-[320px]" : "h-[132px] md:h-[120px]"
             } lg:h-[118px] w-full fixed z-20 transition-all delay-100 drop-shadow-lg`}
         >
-            <div className={`flex justify-center items-center min-h-[132px] md:min-h-[64px] w-full ${isActive ? 'translate-y-[0]' : 'translate-y-[26px] md:translate-y-[0]'} transition-all`}>
+            <div
+                className={`flex justify-center items-center min-h-[132px] md:min-h-[64px] w-full ${
+                    isActive
+                        ? "translate-y-[0]"
+                        : "translate-y-[26px] md:translate-y-[0]"
+                } transition-all`}
+            >
                 <div className="container flex flex-wrap justify-between items-center font-body text-sm">
                     <div className="flex justify-between md:justify-start items-center flex-shrink-0 text-secondary w-full md:max-w-fit mr-0 md:mr-32 mb-12 md:mb-0 px-8 md:px-0">
                         <Image
@@ -62,7 +70,9 @@ export const Header: FC = () => {
                                     d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"
                                 />
                             </svg>
-                            <span className="hidden md:block">+99899 194-94-94</span>
+                            <span className="hidden md:block">
+                                +99899 194-94-94
+                            </span>
                         </a>
                         <button
                             className="bg-primary text-xs md:text-base py-6 md:py-12 px-12 md:px-28 mr-8 md:mr-16 rounded"
@@ -70,7 +80,10 @@ export const Header: FC = () => {
                         >
                             Позвоните мне
                         </button>
-                        <button className="bg-primary text-xs md:text-base py-6 md:py-12 px-12 md:px-28 mr-0 md:mr-16 rounded">
+                        <button
+                            className="bg-primary text-xs md:text-base py-6 md:py-12 px-12 md:px-28 mr-0 md:mr-16 rounded"
+                            onClick={() => handleCommercialModal(true)}
+                        >
                             Получить коммерческое
                         </button>
                         <button
@@ -82,7 +95,13 @@ export const Header: FC = () => {
                     </div>
                 </div>
             </div>
-            <div className={`flex justify-center items-center bg-white md:bg-primary min-h-[54px] w-full ${isActive ? 'translate-y-[0%]' : 'translate-y-[-500%] md:translate-y-[0]'} transition-all`}>
+            <div
+                className={`flex justify-center items-center bg-white md:bg-primary min-h-[54px] w-full ${
+                    isActive
+                        ? "translate-y-[0%]"
+                        : "translate-y-[-500%] md:translate-y-[0]"
+                } transition-all`}
+            >
                 <div className="container flex flex-col md:flex-row justify-center md:justify-start items-center font-body font-semibold text-xs uppercase lg:flex-grow">
                     <a
                         href="#about"
