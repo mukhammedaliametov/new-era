@@ -22,8 +22,8 @@ export const Contacts: FC = () => {
                 />
             </div>
             <div className="bg-black/50 h-full w-full absolute z-0" />
-            <div className="container flex flex-col justify-center items-center md:items-start h-full z-10">
-                <div className="flex flex-col items-center xl:items-start text-center min-w-[400px] max-w-[480px] bg-primary py-24 px-16 md:px-44 rounded">
+            <div className="container flex flex-col justify-center items-center lg:items-start h-full z-10">
+                <div className="flex flex-col items-center xl:items-start text-center min-w-[400px] max-w-[480px] bg-primary py-24 px-16 lg:px-44 rounded">
                     <h1 className="font-display text-3xl mb-28">
                         Контактная информация
                     </h1>

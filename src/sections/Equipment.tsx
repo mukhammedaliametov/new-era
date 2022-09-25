@@ -15,8 +15,8 @@ export const Equipment: FC = () => {
                     Новые продукты
                 </Typography>
                 <div className="flex flex-col items-center w-full">
-                    <div className="container flex justify-center items-center w-full mb-32 px-24 md:px-0">
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-32">
+                    <div className="container flex justify-center items-center w-full mb-32 px-24 lg:px-0">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-cols-3 gap-32">
                             <div className="flex flex-col items-center w-full text-center">
                                 <div className="flex justify-center items-center h-[300px] w-full mb-24 relative">
                                     <Image
@@ -87,8 +87,8 @@ export const Equipment: FC = () => {
                         </div>
                     </div>
                     <div className="flex justify-center items-center bg-primary w-full">
-                        <div className="container flex flex-col md:flex-row items-center py-32 px-24 md:px-0">
-                            <div className="flex justify-center items-center h-[400px] w-full md:w-1/2 relative">
+                        <div className="container flex flex-col lg:flex-row items-center py-32 px-24 lg:px-0">
+                            <div className="flex justify-center items-center h-[400px] w-full lg:w-1/2 relative">
                                 <Image
                                     src={`/assets/images/slides/33.png`}
                                     layout="fill"
@@ -96,7 +96,7 @@ export const Equipment: FC = () => {
                                     alt=""
                                 />
                             </div>
-                            <div className="flex flex-col items-center md:items-start w-full md:w-1/2 text-center md:text-left">
+                            <div className="flex flex-col items-center lg:items-start w-full lg:w-1/2 text-center lg:text-left">
                                 <span className="font-bold text-xl text-tiny mb-16">
                                     МОНИТОРИНГ ТРАНСПОРТА
                                 </span>
@@ -118,8 +118,8 @@ export const Equipment: FC = () => {
                         </div>
                     </div>
                     <div className="flex justify-center items-center w-full">
-                        <div className="container flex flex-col-reverse md:flex-row items-center py-32 px-24 md:px-0">
-                            <div className="flex flex-col items-center md:items-start w-full md:w-1/2 text-center md:text-left">
+                        <div className="container flex flex-col-reverse lg:flex-row items-center py-32 px-24 lg:px-0">
+                            <div className="flex flex-col items-center lg:items-start w-full lg:w-1/2 text-center lg:text-left">
                                 <span className="font-bold text-xl text-tiny mb-8">
                                     ПЕРВЫЙ В МИРЕ БЕСПРОВОДНОЙ ДАТЧИК УРОВНЯ
                                     ТОПЛИВА ЭСКОРТ TD-BLE
@@ -130,7 +130,7 @@ export const Equipment: FC = () => {
                                     type="primary"
                                 />
                             </div>
-                            <div className="flex justify-center items-center h-[400px] w-full md:w-1/2 relative">
+                            <div className="flex justify-center items-center h-[400px] w-full lg:w-1/2 relative">
                                 <Image
                                     src={`/assets/images/slides/4.png`}
                                     layout="fill"
@@ -141,8 +141,8 @@ export const Equipment: FC = () => {
                         </div>
                     </div>
                     <div className="flex justify-center items-center bg-primary w-full">
-                        <div className="container flex flex-col md:flex-row items-center py-32 px-24 md:px-0">
-                            <div className="flex justify-center items-center h-[400px] w-full md:w-1/2 relative">
+                        <div className="container flex flex-col lg:flex-row items-center py-32 px-24 lg:px-0">
+                            <div className="flex justify-center items-center h-[400px] w-full lg:w-1/2 relative">
                                 <Image
                                     src={`/assets/images/slides/2.png`}
                                     layout="fill"
@@ -150,11 +150,11 @@ export const Equipment: FC = () => {
                                     alt=""
                                 />
                             </div>
-                            <div className="flex flex-col items-center md:items-start w-full md:w-1/2 text-center md:text-left">
+                            <div className="flex flex-col items-center lg:items-start w-full lg:w-1/2 text-center lg:text-left">
                                 <span className="font-bold text-xl text-tiny mb-8">
                                     МОНИТОРИНГ ТРАНСПОРТА С КОНТРОЛЕМ ТОПЛИВА
                                 </span>
-                                <span className="mb-24 md:mb-12">
+                                <span className="mb-24 lg:mb-12">
                                     Удаленный контроль расхода топлива
                                     возможен&nbsp; после установки GPS трекера
                                     FMB 125 и датчиков&nbsp; уровня топлива на
@@ -178,7 +178,7 @@ export const Equipment: FC = () => {
                         </div>
                     </div>
                     <div className="flex justify-center items-center w-full">
-                        <div className="container grid grid-cols-1 md:grid-cols-3 gap-y-32 md:gap-y-0 w-full py-32 px-24 md:px-0">
+                        <div className="container grid grid-cols-1 lg:grid-cols-3 gap-y-32 lg:gap-y-0 w-full py-32 px-24 lg:px-0">
                             <div className="flex flex-col items-center w-full">
                                 <span className="text-xl text-tiny max-w-[400px] mb-20 text-center whitespace-pre-wrap">
                                     ДАТЧИК УРОВНЯ ТОПЛИВА&nbsp;
@@ -205,7 +205,7 @@ export const Equipment: FC = () => {
                                 >
                                     Выбрать оборудивонаие
                                 </Button>
-                                <span className="text-center mt-32 md:mt-0">
+                                <span className="text-center mt-32 lg:mt-0">
                                     Это высокоточные датчики уровня топлива,
                                     предназначенные для измерения уровня топлива
                                     в топливном баке транспортного средства.
@@ -213,7 +213,7 @@ export const Equipment: FC = () => {
                                     мониторинга транспорта и передают на него
                                     значения уровня топлива.
                                 </span>
-                                <div className="flex justify-center items-center h-[154px] w-[154px] mt-32 md:mt-0 relative">
+                                <div className="flex justify-center items-center h-[154px] w-[154px] mt-32 lg:mt-0 relative">
                                     <Image
                                         src={`/assets/images/slides/40per.png`}
                                         layout="fill"

@@ -19,7 +19,7 @@ export const Gallery: FC = () => {
 
     return (
         <section id="gallery">
-            <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-3">
+            <div className="grid grid-cols-1 lg:grid-cols-3 grid-rows-3">
                 {images.map((image: string) => (
                     <div
                         key={image}

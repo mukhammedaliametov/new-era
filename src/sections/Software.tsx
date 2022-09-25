@@ -8,12 +8,12 @@ export const Software: FC = () => {
 
     return (
         <section id="software" className="flex justify-center items-center">
-            <div className="container flex flex-col justify-center items-center py-32 px-16 md:px-0">
+            <div className="container flex flex-col justify-center items-center py-32 px-16 lg:px-0">
                 <Typography type="h1" color="black">
                     Программное обеспечение
                 </Typography>
                 <div className="flex flex-col w-full">
-                    <div className="flex flex-col md:flex-row w-full mb-64">
+                    <div className="flex flex-col lg:flex-row w-full mb-64">
                         <div className="flex justify-center max-h-[280px] w-full xl:w-1/2 relative mb-32 xl:mb-0">
                             <Image
                                 src="/assets/images/local-ru.webp"
