@@ -6,7 +6,7 @@ export const About: FC = () => {
         <section id="about" className="flex justify-center items-center bg-primary">
             <div className="container flex flex-col justify-center items-center py-32 p-16">
                 <Typography type="h1" color="black">О компании</Typography>
-                <div className="grid grid-cols-1 xl:grid-cols-3 gap-32 gap-y-40 text-black">
+                <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-32 gap-y-40 text-black">
                     <div className="flex flex-col items-start h-full">
                         <span className="flex justify-center items-center font-display text-2xl xl:text-6xl min-w-[54px] xl:min-w-[100px] mb-6 xl:mb-12 py-6 xl:py-8 px-10 xl:px-12 border-2 rounded-lg border-black">
                             01

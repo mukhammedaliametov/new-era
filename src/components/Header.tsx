@@ -26,7 +26,7 @@ export const Header: FC = () => {
                         : "translate-y-[26px] lg:translate-y-[0]"
                 } transition-all`}
             >
-                <div className="container flex flex-wrap justify-between items-center font-body text-sm">
+                <div className="container flex flex-wrap lg:flex-nowrap xl:flex-wrap justify-between items-center font-body text-sm">
                     <div className="flex justify-between lg:justify-start items-center flex-shrink-0 text-secondary w-full lg:max-w-fit mr-0 lg:mr-32 mb-12 lg:mb-0 px-8 lg:px-0">
                         <Image
                             src="/assets/images/logo.svg"
@@ -51,10 +51,10 @@ export const Header: FC = () => {
                             </button>
                         </div>
                     </div>
-                    <div className="flex items-center flex-wrap justify-end px-8 lg:px-0">
+                    <div className="flex items-center flex-wrap justify-end lg:justify-start xl:justify-end px-8 lg:px-0">
                         <a
                             href="tel:+998991949494"
-                            className="inline-flex items-center text-xl font-bold leading-none mr-8 lg:mr-24"
+                            className="inline-flex items-center lg:text-base xl:text-xl font-bold leading-none mr-8 lg:mr-24"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
